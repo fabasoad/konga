@@ -2,7 +2,7 @@
 extends: default
 
 ignore: |
-  charts/konga/templates/*
+  charts/konga/templates/**
 
 rules:
   line-length:
