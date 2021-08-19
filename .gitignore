@@ -126,3 +126,4 @@ nbproject
 .env
 /seeds/
 .nyc_output
+coverage
