@@ -1,6 +1,6 @@
 'use strict';
 
-var async = require('async');
+var series = require('async/series');
 var _ = require('lodash')
 var defSeedData = require('../../config/default-seed-data.js');
 
@@ -54,11 +54,11 @@ module.exports = function hook(sails) {
                             })
                         })
 
-                        async.series(passportsFns,cb)
+                        series(passportsFns,cb)
 
                     })
             }
-            async.series([
+            series([
                 sails.models.user.seed,
                 seedPassports,
                 sails.models.kongnode.seed,
