@@ -8,7 +8,7 @@
 const KongService = require('../services/KongService');
 const SnapshotsService = require('../services/SnapshotsService');
 const _ = require('lodash')
-const series = require('async/series');
+const async = require('async');
 const fs = require('fs');
 
 /**
@@ -393,7 +393,7 @@ module.exports = _.merge(_.cloneDeep(require('../base/Controller')), {
   //
   //               })
   //
-  //               series(consumerFns, function (err, data) {
+  //               async.series(consumerFns, function (err, data) {
   //                 responseData[key].imported++
   //                 return cb(null, data)
   //               })
@@ -410,7 +410,7 @@ module.exports = _.merge(_.cloneDeep(require('../base/Controller')), {
   //     })
   //
   //
-  //     series(fns, function (err, data) {
+  //     async.series(fns, function (err, data) {
   //       if (err) return res.negotiate(err)
   //       return res.ok(responseData);
   //     });
@@ -473,7 +473,7 @@ module.exports = _.merge(_.cloneDeep(require('../base/Controller')), {
         });
       });
 
-      series(delFns, function (err, data) {
+      async.series(delFns, function (err, data) {
         return cb();
       });
     });
@@ -547,7 +547,7 @@ module.exports = _.merge(_.cloneDeep(require('../base/Controller')), {
 
       });
 
-      series(routeFns, function (err, data) {
+      async.series(routeFns, function (err, data) {
         return cb();
       });
     });
@@ -585,7 +585,7 @@ module.exports = _.merge(_.cloneDeep(require('../base/Controller')), {
 
       });
 
-      series(pluginFns, function (err, data) {
+      async.series(pluginFns, function (err, data) {
         return cb();
       });
     });
@@ -624,7 +624,7 @@ module.exports = _.merge(_.cloneDeep(require('../base/Controller')), {
 
       });
 
-      series(pluginFns, function (err, data) {
+      async.series(pluginFns, function (err, data) {
         return cb();
       });
     });
