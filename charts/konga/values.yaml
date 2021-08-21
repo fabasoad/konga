@@ -6,7 +6,7 @@
 replicaCount: 1
 
 image:
-  repository: pantsel/konga
+  repository: fabasoad/konga
   tag: latest
   pullPolicy: IfNotPresent
 
