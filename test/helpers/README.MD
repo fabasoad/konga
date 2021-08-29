@@ -41,10 +41,10 @@ describe('your test description', function testSet() {
                             return done(error);
                         }
 
-                        expect(result.res.body).to.be.a('array');
-                        expect(result.res.body).to.have.length(123);
+                        expect(result.body).to.be.a('array');
+                        expect(result.body).to.have.length(123);
                         
-                        result.res.body.forEach(function(value) {
+                        result.body.forEach(function(value) {
                             expect(value).to.be.a('object');
                         });
 

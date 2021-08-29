@@ -91,7 +91,7 @@ describe('AuthController', function AuthController() {
                                     return done(error);
                                 }
 
-                                expect(result.res.body).to.be.a('object');
+                                expect(result.body).to.be.a('object');
 
                                 done();
                             }
@@ -143,7 +143,7 @@ describe('AuthController', function AuthController() {
     //                    }
     //
     //
-    //                    expect(result.res.body).to.be.true;
+    //                    expect(result.body).to.be.true;
     //
     //                    done();
     //                }
@@ -188,7 +188,7 @@ describe('AuthController', function AuthController() {
     //                                    return done(error);
     //                                }
     //
-    //                                expect(result.res.body).to.deep.equal({message: 'No authorization header was found'});
+    //                                expect(result.body).to.deep.equal({message: 'No authorization header was found'});
     //
     //                                done();
     //                            }
@@ -211,7 +211,7 @@ describe('AuthController', function AuthController() {
     //                                        return done(error);
     //                                    }
     //
-    //                                    expect(result.res.body).to.deep.equal({message: 'Given password does not match.'});
+    //                                    expect(result.body).to.deep.equal({message: 'Given password does not match.'});
     //
     //                                    done();
     //                                }
@@ -233,7 +233,7 @@ describe('AuthController', function AuthController() {
     //                                        return done(error);
     //                                    }
     //
-    //                                    expect(result.res.body).to.be.true;
+    //                                    expect(result.body).to.be.true;
     //
     //                                    done();
     //                                }

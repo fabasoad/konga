@@ -81,16 +81,16 @@ describe('Generic controller test', function controllerTest() {
                                             if (error) {
                                                 return done(error);
                                             }
-    
-                                            expect(result.res.body.message).to.equal('No authorization header was found');
-    
+
+                                            expect(result.body.message).to.equal('No authorization header was found');
+
                                             done();
                                         }
                                     );
                             });
                         });
                     });
-                    
+
                     describe('invalid format on authorization header', function getRequest() {
                         it('should complain about wrong format', function it(done) {
                             request(sails.hooks.http.app)
@@ -104,7 +104,7 @@ describe('Generic controller test', function controllerTest() {
                                             return done(error);
                                         }
 
-                                        expect(result.res.body.message).to.equal('Invalid authorization header format. Format is Authorization: Bearer [token]');
+                                        expect(result.body.message).to.equal('Invalid authorization header format. Format is Authorization: Bearer [token]');
 
                                         done();
                                     }
@@ -125,7 +125,7 @@ describe('Generic controller test', function controllerTest() {
                                             return done(error);
                                         }
 
-                                        expect(result.res.body.message).to.equal('Given authorization token is not valid');
+                                        expect(result.body.message).to.equal('Given authorization token is not valid');
 
                                         done();
                                     }
@@ -147,7 +147,7 @@ describe('Generic controller test', function controllerTest() {
                                             return done(error);
                                         }
 
-                                        expect(result.res.body.message).to.equal('No authorization header was found');
+                                        expect(result.body.message).to.equal('No authorization header was found');
 
                                         done();
                                     }
@@ -168,7 +168,7 @@ describe('Generic controller test', function controllerTest() {
                                             return done(error);
                                         }
 
-                                        expect(result.res.body.message).to.equal('Invalid authorization header format. Format is Authorization: Bearer [token]');
+                                        expect(result.body.message).to.equal('Invalid authorization header format. Format is Authorization: Bearer [token]');
 
                                         done();
                                     }
@@ -189,7 +189,7 @@ describe('Generic controller test', function controllerTest() {
                                             return done(error);
                                         }
 
-                                        expect(result.res.body.message).to.equal('Given authorization token is not valid');
+                                        expect(result.body.message).to.equal('Given authorization token is not valid');
 
                                         done();
                                     }
@@ -211,7 +211,7 @@ describe('Generic controller test', function controllerTest() {
                                             return done(error);
                                         }
 
-                                        expect(result.res.body.message).to.equal('No authorization header was found');
+                                        expect(result.body.message).to.equal('No authorization header was found');
 
                                         done();
                                     }
@@ -232,7 +232,7 @@ describe('Generic controller test', function controllerTest() {
                                         return done(error);
                                     }
 
-                                    expect(result.res.body.message).to.equal('Invalid authorization header format. Format is Authorization: Bearer [token]');
+                                    expect(result.body.message).to.equal('Invalid authorization header format. Format is Authorization: Bearer [token]');
 
                                     done();
                                 }
@@ -253,7 +253,7 @@ describe('Generic controller test', function controllerTest() {
                                             return done(error);
                                         }
 
-                                        expect(result.res.body.message).to.equal('Given authorization token is not valid');
+                                        expect(result.body.message).to.equal('Given authorization token is not valid');
 
                                         done();
                                     }
@@ -276,7 +276,7 @@ describe('Generic controller test', function controllerTest() {
                                             return done(error);
                                         }
 
-                                        expect(result.res.body.message).to.equal('No authorization header was found');
+                                        expect(result.body.message).to.equal('No authorization header was found');
 
                                         done();
                                     }
@@ -298,7 +298,7 @@ describe('Generic controller test', function controllerTest() {
                                             return done(error);
                                         }
 
-                                        expect(result.res.body.message).to.equal('Invalid authorization header format. Format is Authorization: Bearer [token]');
+                                        expect(result.body.message).to.equal('Invalid authorization header format. Format is Authorization: Bearer [token]');
 
                                         done();
                                     }
@@ -320,7 +320,7 @@ describe('Generic controller test', function controllerTest() {
                                             return done(error);
                                         }
 
-                                        expect(result.res.body.message).to.equal('Given authorization token is not valid');
+                                        expect(result.body.message).to.equal('Given authorization token is not valid');
 
                                         done();
                                     }
@@ -343,7 +343,7 @@ describe('Generic controller test', function controllerTest() {
                                             return done(error);
                                         }
 
-                                        expect(result.res.body.message).to.equal('No authorization header was found');
+                                        expect(result.body.message).to.equal('No authorization header was found');
 
                                         done();
                                     }
@@ -365,7 +365,7 @@ describe('Generic controller test', function controllerTest() {
                                             return done(error);
                                         }
 
-                                        expect(result.res.body.message).to.equal('Invalid authorization header format. Format is Authorization: Bearer [token]');
+                                        expect(result.body.message).to.equal('Invalid authorization header format. Format is Authorization: Bearer [token]');
 
                                         done();
                                     }
@@ -387,7 +387,7 @@ describe('Generic controller test', function controllerTest() {
                                             return done(error);
                                         }
 
-                                        expect(result.res.body.message).to.equal('Given authorization token is not valid');
+                                        expect(result.body.message).to.equal('Given authorization token is not valid');
 
                                         done();
                                     }
@@ -408,7 +408,7 @@ describe('Generic controller test', function controllerTest() {
                                             return done(error);
                                         }
 
-                                        expect(result.res.body.message).to.equal('No authorization header was found');
+                                        expect(result.body.message).to.equal('No authorization header was found');
 
                                         done();
                                     }
@@ -428,7 +428,7 @@ describe('Generic controller test', function controllerTest() {
                                             return done(error);
                                         }
 
-                                        expect(result.res.body.message).to.equal('Invalid authorization header format. Format is Authorization: Bearer [token]');
+                                        expect(result.body.message).to.equal('Invalid authorization header format. Format is Authorization: Bearer [token]');
 
                                         done();
                                     }
@@ -448,7 +448,7 @@ describe('Generic controller test', function controllerTest() {
                                             return done(error);
                                         }
 
-                                        expect(result.res.body.message).to.equal('Given authorization token is not valid');
+                                        expect(result.body.message).to.equal('Given authorization token is not valid');
 
                                         done();
                                     }
@@ -499,10 +499,10 @@ describe('Generic controller test', function controllerTest() {
                                         return done(error);
                                     }
 
-                                    expect(result.res.body).to.be.a('array');
-                                    expect(result.res.body).to.have.length(testCase.count);
+                                    expect(result.body).to.be.a('array');
+                                    expect(result.body).to.have.length(testCase.count);
 
-                                    result.res.body.forEach(function(value) {
+                                    result.body.forEach(function(value) {
                                         expect(value).to.be.a('object');
                                     });
 
@@ -526,16 +526,16 @@ describe('Generic controller test', function controllerTest() {
                                         return done(error);
                                     }
 
-                                    expect(result.res.body).to.be.a('object');
+                                    expect(result.body).to.be.a('object');
 
                                     _.forEach(testCase.data.identifier, function iterator(value, key) {
-                                        expect(result.res.body).to.have.property(key);
+                                        expect(result.body).to.have.property(key);
 
                                         if (_.isDate(value)) {
                                             value = value.toISOString();
                                         }
 
-                                        expect(result.res.body[key]).to.equal(value);
+                                        expect(result.body[key]).to.equal(value);
                                     });
 
                                     done();
@@ -578,8 +578,8 @@ describe('Generic controller test', function controllerTest() {
                                         return done(error);
                                     }
 
-                                    expect(result.res.body).to.be.a('object');
-                                    expect(result.res.body).to.deep.equal({count: testCase.count});
+                                    expect(result.body).to.be.a('object');
+                                    expect(result.body).to.deep.equal({count: testCase.count});
 
                                     done();
                                 }
@@ -601,19 +601,19 @@ describe('Generic controller test', function controllerTest() {
                                         return done(error);
                                     }
 
-                                    expect(result.res.body).to.be.a('object');
+                                    expect(result.body).to.be.a('object');
 
                                     _.forEach(testCase.data.newRecord, function iterator(value, key) {
-                                        expect(result.res.body).to.have.property(key);
+                                        expect(result.body).to.have.property(key);
 
                                         if (_.isDate(value)) {
                                             value = value.toISOString();
                                         }
 
-                                        expect(result.res.body[key]).to.equal(value);
+                                        expect(result.body[key]).to.equal(value);
                                     });
 
-                                    createdRecordId = result.res.body.id;
+                                    createdRecordId = result.body.id;
 
                                     done();
                                 }
@@ -637,19 +637,19 @@ describe('Generic controller test', function controllerTest() {
                                         return done(error);
                                     }
 
-                                    expect(result.res.body).to.be.a('object');
+                                    expect(result.body).to.be.a('object');
 
                                     _.forEach(dataToUpdate, function iterator(value, key) {
-                                        expect(result.res.body).to.have.property(key);
+                                        expect(result.body).to.have.property(key);
 
                                         if (_.isDate(value)) {
                                             value = value.toISOString();
                                         }
 
-                                        expect(result.res.body[key]).to.equal(value);
+                                        expect(result.body[key]).to.equal(value);
                                     });
 
-                                    expect(result.res.body.id).to.equal(createdRecordId);
+                                    expect(result.body.id).to.equal(createdRecordId);
 
                                     done();
                                 }
@@ -669,21 +669,21 @@ describe('Generic controller test', function controllerTest() {
                                         return done(error);
                                     }
 
-                                    expect(result.res.body).to.be.a('object');
+                                    expect(result.body).to.be.a('object');
 
                                     var dataToUpdate = testCase.data.updateRecord || testCase.data.identifier;
 
                                     _.forEach(dataToUpdate, function iterator(value, key) {
-                                        expect(result.res.body).to.have.property(key);
+                                        expect(result.body).to.have.property(key);
 
                                         if (_.isDate(value)) {
                                             value = value.toISOString();
                                         }
 
-                                        expect(result.res.body[key]).to.equal(value);
+                                        expect(result.body[key]).to.equal(value);
                                     });
 
-                                    expect(result.res.body.id).to.equal(createdRecordId);
+                                    expect(result.body.id).to.equal(createdRecordId);
 
                                     done();
                                 }

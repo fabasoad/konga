@@ -33,7 +33,7 @@ module.exports.authenticate = function authenticate(user, next) {
                 if (error) {
                     next(error);
                 } else {
-                    next(null, result.res.body);
+                    next(null, result.body);
                 }
             }
         );
