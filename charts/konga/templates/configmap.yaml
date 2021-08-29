@@ -27,7 +27,6 @@ data:
   DB_HOST: {{ default "localhost" .Values.config.db_host }}
   DB_PORT: "{{ default 5432 .Values.config.db_port }}"
   DB_USER: {{ .Values.config.db_user }}
-  DB_PASSWORD: {{ .Values.config.db_password }}
   {{- if eq $db_adapter "postgres" }}
   DB_PG_SCHEMA: {{ default "public" .Values.config.db_pg_schema }}
   {{- end }}
@@ -38,9 +37,6 @@ data:
   KONGA_LOG_LEVEL: {{ default "debug" .Values.config.log_level }}
   {{ else if eq .Values.config.node_env "production" }}
   KONGA_LOG_LEVEL: {{ default "warn" .Values.config.log_level }}
-  {{- end }}
-  {{- if .Values.config.token_secret }}
-  TOKEN_SECRET: {{ .Values.config.token_secret }}
   {{- end }}
   KONGA_SEED_KONG_NODE_DATA_SOURCE_FILE: "{{ .Values.config.konga_node_data }}"
   KONGA_SEED_USER_DATA_SOURCE_FILE: "{{ .Values.config.konga_user_data }}"
