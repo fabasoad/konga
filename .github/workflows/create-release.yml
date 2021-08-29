@@ -49,11 +49,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: create_release
     steps:
-      - name: Get latest release tag
-        id: latest_release
-        run: |
-          latest_tag=$(curl --silent "https://api.github.com/repos/${{ github.repository }}/releases/latest" | grep '"tag_name":' | sed -E 's/.*"v([^"]+)".*/\1/')
-          echo "::set-output name=tag::${latest_tag}"
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       - name: Set up Docker Buildx
@@ -63,6 +58,11 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Get latest release tag
+        id: latest_release
+        run: |
+          result=$(curl "https://api.github.com/repos/${{ github.repository }}/tags" | jq -r '.[0].name' | cut -c 2-)
+          echo "::set-output name=tag::${result}"
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
