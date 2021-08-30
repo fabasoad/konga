@@ -15,7 +15,7 @@ env:
 
 jobs:
   unit_tests:
-    name: Test
+    name: Lint and Test
     timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
@@ -31,6 +31,8 @@ jobs:
       - name: Compile
         if: ${{ steps.cache.outputs.cache-hit != 'true' }}
         run: npm install
+      - name: Lint
+        run: npm run lint
       - name: Unit tests
         run: npm test
         if: github.ref != 'refs/heads/main'
