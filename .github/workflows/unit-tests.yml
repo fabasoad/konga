@@ -25,9 +25,9 @@ jobs:
         uses: actions/cache@v2.1.6
         with:
           path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-yarn-
+            ${{ runner.os }}-npm-
       - name: Compile
         if: ${{ steps.cache.outputs.cache-hit != 'true' }}
         run: npm install
