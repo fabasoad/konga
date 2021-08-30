@@ -21,4 +21,3 @@ With the LDAP integration, you can authenticate via your LDAP server. Currently 
 | `KONGA_LDAP_ATTR_FIRSTNAME` | `givenName` | LDAP attribute name that should be used as the konga user's first name |
 | `KONGA_LDAP_ATTR_LASTNAME` | `sn` | LDAP attribute name that should be used as the konga user's last name |
 | `KONGA_LDAP_ATTR_EMAIL` | `mail` | LDAP attribute name that should be used as the konga user's email address |
-

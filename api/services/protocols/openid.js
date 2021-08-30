@@ -18,9 +18,9 @@
  * @param {Function}  next
  */
 module.exports = function openid(request, identifier, profile, next) {
-  var query = {
+  const query = {
     identifier: identifier,
-    protocol: 'openid'
+    protocol: 'openid',
   };
 
   sails.services.passport.connect(request, query, profile, next);

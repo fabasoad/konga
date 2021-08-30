@@ -1,9 +1,9 @@
 # Changing the default user seed data
 
-If you wish to seed users on first run, you can supply a file with user data. 
+If you wish to seed users on first run, you can supply a file with user data.
 A sample file could look like:
 
-````
+```javascript
 module.exports = [
         {
             "username": "myadmin",
@@ -26,16 +26,17 @@ module.exports = [
             "password": "anotherpassword"
         }
     ]
-````
+```
 
 To make Konga use this file, you should set the environment variable KONGA_SEED_USER_DATA_SOURCE_FILE to point to the files location:
-````
+
+```shell
 export KONGA_SEED_USER_DATA_SOURCE_FILE=~/userdb.data 
-````
+```
 
 This is especially useful when running Konga in a container as part of a Docker swarm. The file can be setup as a Docker secret and supplied to the container. This can be done with an entry in a compose file similar to:
 
-````
+```yaml
 version: "3.1"
 
 secrets:
@@ -54,17 +55,17 @@ services:
         condition: on-failure
     ports:
      - 1337:1337
-````
+```
 
 (This will work if the swarm is setup with the konga_user_seed secret set with it's value as the contents of the user file.)
 
-# Adding a default kong node seed
+## Adding a default kong node seed
 
 If you wish to seed one or multiple kong connections on the first run, you can also add a kong node seed file, similar to the user one.
 
 For example :
 
-```
+```javascript
 module.exports = [
     {
         "name": "Kong Test Seed",
@@ -77,6 +78,7 @@ module.exports = [
 ```
 
 To make Konga use this file, you should set the environment variable KONGA_SEED_KONG_NODE_DATA_SOURCE_FILE to point to the files location:
-````
+
+```shell
 export KONGA_SEED_KONG_NODE_DATA_SOURCE_FILE=~/kong_node.data 
-````
+```
