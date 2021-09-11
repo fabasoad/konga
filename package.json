@@ -9,7 +9,7 @@
     "GUI"
   ],
   "dependencies": {
-    "@slack/client": "3.16.1-sec.2",
+    "@slack/client": "5.0.2",
     "async": "3.2.1",
     "barrels": "1.6.6",
     "bcryptjs": "2.4.3",
