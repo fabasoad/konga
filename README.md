@@ -1,3 +1,5 @@
+> **DEPRECATED! This repository is not maintained anymore**
+
 # More than just another GUI to [KONG Admin API](http://getkong.org)
 
 ![GitHub release](https://img.shields.io/github/v/release/fabasoad/konga?include_prereleases) ![Unit Tests](https://github.com/fabasoad/konga/workflows/Unit%20Tests/badge.svg) ![YAML Lint](https://github.com/fabasoad/konga/workflows/YAML%20Lint/badge.svg) ![Security Tests](https://github.com/fabasoad/konga/workflows/Security%20Tests/badge.svg) [![Maintainability](https://api.codeclimate.com/v1/badges/d9a30c3fce4e477e227d/maintainability)](https://codeclimate.com/github/fabasoad/konga/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/d9a30c3fce4e477e227d/test_coverage)](https://codeclimate.com/github/fabasoad/konga/test_coverage)
